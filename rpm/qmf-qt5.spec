@@ -47,6 +47,8 @@ Patch16: 0016-Revert-Fix-bundled-zlib-detection.patch
 Patch17: 0017-Add-signature-settings-in-account.patch
 Patch18: 0018-Use-socket-s-local-address-for-HELO-and-EHLO-message.patch
 
+Patch90: 0090-fix_missing_librares.patch
+
 %description
 The Qt Messaging Framework, QMF, consists of a C++ library and daemon server
 process that can be used to build email clients, and more generally software
@@ -170,6 +172,7 @@ This package contains the tests for Qt Messaging Framework (QMF).
 %patch17 -p1
 %patch18 -p1
 
+%patch90 -p1
 %build
 
 # syncqt.pl doesn't generate headers if build is not detected to be git_build
