@@ -190,6 +190,7 @@ touch .git
     DEFINES+=USE_ACCOUNTS_QT \
     DEFINES+=USE_KEEPALIVE \
     DEFINES+=USE_HTML_PARSER \
+    DEFINES-=QT_NO_LINKED_LIST \
     CONFIG+=syslog
 
 make %{?_smp_mflags}
