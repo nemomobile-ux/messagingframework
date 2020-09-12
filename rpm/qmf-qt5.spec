@@ -21,11 +21,13 @@ BuildRequires:  pkgconfig(libsignon-qt5)
 BuildRequires:  pkgconfig(keepalive)
 BuildRequires:  pkgconfig(qt5-boostable)
 #Needed for qhelpgenerator
-BuildRequires:  qt5-qttools-qthelp-devel
-BuildRequires:  qt5-plugin-platform-minimal
-BuildRequires:  qt5-plugin-sqldriver-sqlite
+BuildRequires:  pkgconfig(Qt5Help)
 BuildRequires:  fdupes
 BuildRequires:  gpgme-devel
+%if !0%{?fedora}
+BuildRequires:  qt5-plugin-platform-minimal
+BuildRequires:  qt5-plugin-sqldriver-sqlite
+%endif
 Requires:       buteo-syncfw-qt5 >= 0.7.16 
 
 Patch1: 0001-Stop-_incomingDataTimer-when-imapprotocol-object-is-.patch
