@@ -230,10 +230,10 @@ install -m 644 -p %{SOURCE1} %{buildroot}%{_datadir}/mapplauncherd/privileges.d
 %exclude %{_libdir}/libQmfClient.la
 %{_libdir}/pkgconfig/QmfMessageServer.pc
 %{_libdir}/pkgconfig/QmfClient.pc
-%{_datadir}/qt5/mkspecs/modules/qt_lib_qmfclient.pri
-%{_datadir}/qt5/mkspecs/modules/qt_lib_qmfclient_private.pri
-%{_datadir}/qt5/mkspecs/modules/qt_lib_qmfmessageserver.pri
-%{_datadir}/qt5/mkspecs/modules/qt_lib_qmfmessageserver_private.pri
+%{_prefix}/*/qt5/mkspecs/modules/qt_lib_qmfclient.pri
+%{_prefix}/*/qt5/mkspecs/modules/qt_lib_qmfclient_private.pri
+%{_prefix}/*/qt5/mkspecs/modules/qt_lib_qmfmessageserver.pri
+%{_prefix}/*/qt5/mkspecs/modules/qt_lib_qmfmessageserver_private.pri
 
 %files -n libqmfmessageserver1-qt5
 %defattr(-,root,root,-)
