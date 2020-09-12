@@ -242,8 +242,8 @@ install -m 644 -p %{SOURCE1} %{buildroot}%{_datadir}/mapplauncherd/privileges.d
 %{_datadir}/mapplauncherd/privileges.d/*
 %{_libdir}/libQmfMessageServer.so.*
 %{_libdir}/qt5/plugins/messageservices
-%{_libdir}/systemd/user/*.service
-%{_libdir}/systemd/user/user-session.target.wants/*.service
+%{_prefix}/*/systemd/user/*.service
+%{_prefix}/*/systemd/user/user-session.target.wants/*.service
 
 %files -n libqmfclient1-qt5
 %defattr(-,root,root,-)
