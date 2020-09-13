@@ -85,7 +85,11 @@ using Qt Messaging Framework libraries.
 %package -n libqmfmessageserver1-qt5
 Summary:    Qt Messaging Framework (QMF) message server support library
 Group:      System/Libraries
+%if 0%{?fedora}
+Requires:   qt5-qtbase
+%else
 Requires:   qt5-qtsql
+%endif
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 
